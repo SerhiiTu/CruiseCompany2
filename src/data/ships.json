@@ -1,0 +1,38 @@
+{
+  "ships": [
+    {
+      "name": "Livia",
+      "slug": "livia",
+      "image": "livia.jpg",
+      "id": 1,
+      "stars": 5,
+      "year": 2007,
+      "length": 331,
+      "width": 43,
+      "height": 65,
+      "decks": 19,
+      "max_speed": 22.3,
+      "capacity": 4800,
+      "crew": 1700,
+      "registry_port": "Valletta",
+      "description": "Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia"
+    },
+    {
+      "name": "Solomia",
+      "slug": "solomia",
+      "image": "livia.jpg",
+      "id": 2,
+      "stars": 4,
+      "year": 2007,
+      "length": 280,
+      "width": 36,
+      "height": 49,
+      "decks": 16,
+      "max_speed": 21.4,
+      "capacity": 3600,
+      "crew": 1200,
+      "registry_port": "Valletta",
+      "description": "Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia Test description for cruise ship with name Livia"
+    }
+  ]
+}
