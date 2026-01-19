@@ -1,24 +1,30 @@
 <script lang="ts">
 import ShipCardComponent from '@/components/ShipCardComponent.vue'
-import shipsData from '/Users/serhiitumarkin/WebProjects/CruiseCompany2/src/data/ships.json'
-import { RouterView } from 'vue-router'
+import shipsData from '@/data/ships.json'
+
 export default {
-  computed: {},
-  props: {},
+  name: 'ShipsView',
+  components: { ShipCardComponent },
   data() {
     return {
       ships: shipsData.ships,
     }
   },
-  components: { ShipCardComponent },
 }
 </script>
 
 <template>
-  <div class="">
-    <h2>Our ships:</h2>
-    <div class="">
+  <section class="ships-page">
+    <header class="ships-header">
+      <h1>Our Cruise Fleet</h1>
+      <p>
+        Discover our modern and luxurious cruise ships, designed to deliver unforgettable journeys
+        across the world’s most beautiful seas.
+      </p>
+    </header>
+
+    <section class="ships-grid">
       <ShipCardComponent v-for="ship in ships" :key="ship.id" :ship="ship" />
-    </div>
-  </div>
+    </section>
+  </section>
 </template>
