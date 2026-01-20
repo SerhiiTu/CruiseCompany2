@@ -1,14 +1,20 @@
 <script lang="ts">
 import ShipCardComponent from '@/components/ShipCardComponent.vue'
-import shipsData from '@/data/ships.json'
+import { useMainDataStore } from '@/stores/mainDataStore'
 
 export default {
   name: 'ShipsView',
   components: { ShipCardComponent },
+  computed: {
+    dataStore() {
+      return useMainDataStore()
+    },
+    ships() {
+      return this.dataStore.ships
+    },
+  },
   data() {
-    return {
-      ships: shipsData.ships,
-    }
+    return {}
   },
 }
 </script>

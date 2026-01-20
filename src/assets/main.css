@@ -16,7 +16,19 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.logo-image {
+  height: 64px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.05);
 }
 
 .logo-placeholder {
@@ -97,6 +109,132 @@
 .ship-card-link {
   text-decoration: none;
   color: inherit;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.home {
+  text-align: center;
+  padding: 80px 24px 40px;
+}
+
+.home h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.home p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* ABOUT US */
+.about-us {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.about-us p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+/* HIGHLIGHT ROW: LATEST SHIP + TOP CRUISE */
+.highlight-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.highlight-card {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.highlight-card header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.highlight-card header p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.highlight-card-inner {
+  display: flex;
+  justify-content: center; /* карточка теперь по центру своей колонки */
+}
+
+/* CAPTAIN OF THE MONTH */
+.top-captain {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 0 24px;
+}
+
+.top-captain header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.top-captain header p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .highlight-row {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .highlight-card {
+    flex: 1 1 100%;
+  }
+
+  .top-captain header h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 60px 24px 40px;
+  }
+  .about-us {
+    margin-bottom: 40px;
+  }
+  .highlight-row {
+    gap: 32px;
+  }
 }
 
 .ship-card {
@@ -802,6 +940,121 @@
   }
 
   .team-section h2 {
+    font-size: 28px;
+  }
+}
+
+.contact-form-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.contact-header {
+  margin-bottom: 32px;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #cbd5f5;
+  font-size: 14px;
+  font-family: inherit;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0ea5a4;
+  box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.2);
+}
+
+.contact-submit {
+  align-self: flex-start;
+  margin-top: 12px;
+
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #0ea5a4, #0284c7);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35);
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 60px 24px;
+  }
+
+  .contact-card {
+    padding: 32px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-header h2 {
     font-size: 28px;
   }
 }

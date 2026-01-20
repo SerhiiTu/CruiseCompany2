@@ -1,16 +1,19 @@
 <script lang="ts">
 import PersonCardComponent from '@/components/PersonCardComponent.vue'
-import teamData from '@/data/team.json'
+import { useMainDataStore } from '@/stores/mainDataStore'
 
 export default {
   name: 'TeamView',
   components: { PersonCardComponent },
   computed: {
+    dataStore() {
+      return useMainDataStore()
+    },
     officeTeam() {
-      return teamData.persons.filter((p) => p.job_title !== 'Captain')
+      return useMainDataStore().persons.filter((p) => p.job_title !== 'Captain')
     },
     captains() {
-      return teamData.persons.filter((p) => p.job_title === 'Captain')
+      return useMainDataStore().persons.filter((p) => p.job_title === 'Captain')
     },
   },
 }

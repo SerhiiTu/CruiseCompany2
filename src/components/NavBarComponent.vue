@@ -7,7 +7,7 @@ export default {
 <template>
   <header class="nav">
     <RouterLink to="/" class="logo">
-      <div class="logo-placeholder">LOGO</div>
+      <img src="/images/logo2.svg" alt="Cruise company logo" class="logo-image" />
     </RouterLink>
 
     <nav class="nav-links">

@@ -1,24 +1,25 @@
 <script lang="ts">
 import ShipCardComponent from '@/components/ShipCardComponent.vue'
-import cruisesData from '@/data/cruises.json'
-import shipsData from '@/data/ships.json'
+import { useMainDataStore } from '@/stores/mainDataStore'
 
 export default {
   name: 'DetailsCruiseView',
   components: { ShipCardComponent },
-  props: {
-    cruise: {
-      type: String,
-      required: true,
-    },
-  },
   computed: {
+    dataStore() {
+      return useMainDataStore()
+    },
+    cruiseSlug() {
+      return this.$route.params.cruise as string
+    },
     currentCruise() {
-      return cruisesData.cruises.find((c) => c.slug === this.cruise)
+      return this.dataStore.getCruiseBySlug(this.cruiseSlug)
     },
     currentCruiseShip() {
-      return shipsData.ships.find((s) => s.id === this.currentCruise?.ship_id)
+      if (!this.currentCruise) return null
+      return this.dataStore.getShipById(this.currentCruise.ship_id)
     },
+
     formattedRoute() {
       const ports = this.currentCruise?.ports
       if (!ports || ports.length === 0) return ''

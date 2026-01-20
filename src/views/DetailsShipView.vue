@@ -1,7 +1,6 @@
 <script lang="ts">
 import PersonCardComponent from '@/components/PersonCardComponent.vue'
-import shipsData from '@/data/ships.json'
-import teamData from '@/data/team.json'
+import { useMainDataStore } from '@/stores/mainDataStore'
 
 export default {
   name: 'DetailsShipView',
@@ -13,11 +12,19 @@ export default {
     },
   },
   computed: {
+    dataStore() {
+      return useMainDataStore()
+    },
+    shipSlug() {
+      return this.$route.params.ship as string
+    },
+
     currentShip() {
-      return shipsData.ships.find((s) => s.slug === this.ship)
+      return this.dataStore.getShipBySlug(this.shipSlug)
     },
     captain() {
-      return teamData.persons.find((p) => p.id === this.currentShip?.captain_id)
+      if (!this.currentShip) return null
+      return this.dataStore.getPersonById(this.currentShip.captain_id)
     },
   },
 }
