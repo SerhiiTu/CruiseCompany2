@@ -1,8 +1,11 @@
 <script lang="ts">
+import PersonCardComponent from '@/components/PersonCardComponent.vue'
 import shipsData from '@/data/ships.json'
+import teamData from '@/data/team.json'
 
 export default {
   name: 'DetailsShipView',
+  components: { PersonCardComponent },
   props: {
     ship: {
       type: String,
@@ -12,6 +15,9 @@ export default {
   computed: {
     currentShip() {
       return shipsData.ships.find((s) => s.slug === this.ship)
+    },
+    captain() {
+      return teamData.persons.find((p) => p.id === this.currentShip?.captain_id)
     },
   },
 }
@@ -46,5 +52,10 @@ export default {
         <p>{{ currentShip.description }}</p>
       </div>
     </div>
+    <section v-if="captain" class="ship-captain">
+      <h2 class="captain-title">👨‍✈️ Captain of the ship</h2>
+
+      <PersonCardComponent :person="captain" />
+    </section>
   </section>
 </template>
