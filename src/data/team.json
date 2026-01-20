@@ -116,7 +116,7 @@
     {
       "first_name": "Michael",
       "last_name": "Reinhardt",
-      "image": "ceo1.avif",
+      "image": "ceo1.jpg",
       "id": 8,
       "date_of_birth": "04.11.1974",
       "citizenship": "Germany",
@@ -132,7 +132,7 @@
     {
       "first_name": "Sofia",
       "last_name": "Martinez",
-      "image": "operations1.avif",
+      "image": "operations1.jpg",
       "id": 9,
       "date_of_birth": "19.08.1981",
       "citizenship": "Spain",
@@ -147,7 +147,7 @@
     {
       "first_name": "Thomas",
       "last_name": "Bergström",
-      "image": "safety1.avif",
+      "image": "safety1.jpg",
       "id": 10,
       "date_of_birth": "27.01.1978",
       "citizenship": "Sweden",
@@ -162,7 +162,7 @@
     {
       "first_name": "Isabelle",
       "last_name": "Moreau",
-      "image": "hospitality1.avif",
+      "image": "hospitality1.jpg",
       "id": 11,
       "date_of_birth": "03.06.1985",
       "citizenship": "France",
@@ -177,7 +177,7 @@
     {
       "first_name": "David",
       "last_name": "Chen",
-      "image": "marketing1.avif",
+      "image": "marketing1.jpg",
       "id": 12,
       "date_of_birth": "15.09.1986",
       "citizenship": "Singapore",
@@ -192,7 +192,7 @@
     {
       "first_name": "Lars",
       "last_name": "Hoffmann",
-      "image": "fleet1.avif",
+      "image": "fleet1.jpg",
       "id": 13,
       "date_of_birth": "08.12.1976",
       "citizenship": "Netherlands",
